@@ -482,6 +482,7 @@ svg {
   display: flex;
   opacity: 0;
   pointer-events: none;
+  padding: 0 20px;
 }
 .modal__inner {
   margin: auto;
@@ -778,6 +779,9 @@ svg {
     font-size: 32px;
   }
 
+  .modal {
+    padding: 0;
+  }
   .modal__inner {
     position: absolute;
     bottom: 0;

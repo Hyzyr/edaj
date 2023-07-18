@@ -32,6 +32,7 @@
 }
 @media (max-width: 460px) {
   @include comingSoon-460;
+  @include components-460;
 }
 @media (max-width: 370px) {
   @include comingSoon-370;

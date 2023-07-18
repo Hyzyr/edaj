@@ -279,6 +279,7 @@
   display: flex;
   opacity: 0;
   pointer-events: none;
+  padding: 0 20px;
   &__inner {
     margin: auto;
     max-width: 614px;
@@ -328,5 +329,17 @@
   &.active {
     opacity: 1;
     pointer-events: all;
+  }
+}
+
+@mixin components-460 {
+  .modal {
+    padding: 0;
+    &__inner {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 56.5%;
+    }
   }
 }
