@@ -436,31 +436,19 @@ svg {
           justify-content: center;
 }
 .checkbox__outer label {
-  color: #101010;
+  color: #222222;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.4;
-  font-family: "Cormorant Garamond", sans-serif;
   margin-left: 10px;
-}
-.checkbox__outer label p {
-  font-family: "Cormorant Garamond", sans-serif;
-  color: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: inherit;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   position: relative;
-  color: #222222;
   letter-spacing: 0.8px;
-  line-height: 1.15em;
+  line-height: 1.2em;
+  font-family: "Cormorant Garamond", sans-serif;
 }
-.checkbox__outer label p:hover {
-  opacity: 0.6;
-}
-.checkbox__outer label p::after {
+.checkbox__outer label::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -468,6 +456,16 @@ svg {
   position: absolute;
   bottom: 2px;
   left: 0;
+}
+.checkbox__outer label:hover {
+  opacity: 0.6;
+}
+.checkbox__outer label p {
+  color: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: inherit;
+  letter-spacing: 0.8px;
 }
 
 .modal {
