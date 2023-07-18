@@ -314,7 +314,7 @@ svg {
   font-family: "Cormorant Garamond", sans-serif;
   display: none;
 }
-.input__outer.active label {
+.input__outer.error label {
   display: block;
 }
 
