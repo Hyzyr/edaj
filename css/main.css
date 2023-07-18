@@ -767,6 +767,13 @@ svg {
   .comingSoon__inner-form h2 {
     font-size: 32px;
   }
+
+  .modal__inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 56.5%;
+  }
 }
 @media (max-width: 370px) {
   .comingSoon {
