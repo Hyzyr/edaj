@@ -180,7 +180,6 @@
     height: auto;
   }
 }
-
 .checkbox {
   display: inline-flex;
   position: relative;
@@ -249,16 +248,25 @@
         font-style: normal;
         font-weight: 500;
         font-size: inherit;
-        text-decoration: underline;
         transition: 0.3s ease;
+        position: relative;
+        color: $black-1;
         &:hover {
           opacity: 0.6;
+        }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $black-1;
+          position: absolute;
+          bottom: 2px;
+          left: 0;
         }
       }
     }
   }
 }
-
 .modal {
   position: fixed;
   top: 0;
