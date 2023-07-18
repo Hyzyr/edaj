@@ -1,0 +1,83 @@
+//
+//
+// Cormorant Garamond
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Medium.woff2") format("woff2"),
+    url("../fonts/CormorantGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Regular.woff2") format("woff2"),
+    url("../fonts/CormorantGaramond-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+//
+//
+// Akzidenz-Grotesk
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("../fonts/AkzidenzGroteskPro-Md.woff2") format("woff2"),
+    url("../fonts/AkzidenzGroteskPro-Md.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("../fonts/AkzidenzGroteskPro-Bold.woff2") format("woff2"),
+    url("../fonts/AkzidenzGroteskPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Akzidenz Grotesk";
+  src: url("../fonts/AkzidenzGroteskPro-Regular.woff2") format("woff2"),
+    url("../fonts/AkzidenzGroteskPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography */
+h1 {
+  font-size: 52px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 34px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 18px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+p {
+  line-height: 1.8em;
+}

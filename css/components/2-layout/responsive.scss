@@ -1,0 +1,41 @@
+@media (max-width: 1940px) {
+  @include comingSoon-1940;
+}
+@media (max-width: 1480px) {
+  @include comingSoon-1480;
+}
+@media (max-width: 1160px) {
+  .autoContainer {
+    padding: 0 40px;
+  }
+  @include comingSoon-1160;
+}
+@media (max-width: 1025px) {
+  .autoContainer {
+    padding: 0 30px;
+  }
+  // @include header-1025;
+}
+
+@media (max-width: 940px) {
+  .autoContainer {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  .autoContainer {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 580px) {
+  @include comingSoon-580;
+}
+@media (max-width: 460px) {
+  @include comingSoon-460;
+}
+@media (max-width: 370px) {
+  @include comingSoon-370;
+}
+@media (max-height: 800px) {
+  @include comingSoon-height-800;
+}
