@@ -385,6 +385,7 @@ svg {
   z-index: 1;
   font-size: inherit;
   opacity: 0;
+  cursor: pointer;
 }
 .checkbox input:checked + span::before {
   border-color: #222222;
@@ -443,7 +444,7 @@ svg {
   font-family: "Cormorant Garamond", sans-serif;
   margin-left: 10px;
 }
-.checkbox__outer label a {
+.checkbox__outer label p {
   font-family: "Cormorant Garamond", sans-serif;
   color: inherit;
   font-style: normal;
@@ -453,11 +454,13 @@ svg {
   transition: 0.3s ease;
   position: relative;
   color: #222222;
+  letter-spacing: 0.8px;
+  line-height: 1.15em;
 }
-.checkbox__outer label a:hover {
+.checkbox__outer label p:hover {
   opacity: 0.6;
 }
-.checkbox__outer label a::after {
+.checkbox__outer label p::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -515,7 +518,7 @@ svg {
   color: #222222;
   letter-spacing: 6.4px;
 }
-.modal__inner .close {
+.modal__close {
   width: 24px;
   height: 24px;
   display: -webkit-box;
@@ -534,12 +537,12 @@ svg {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.modal__inner .close svg {
+.modal__close svg {
   width: 100%;
   height: 100%;
   fill: #000;
 }
-.modal__inner .close:hover {
+.modal__close:hover {
   opacity: 0.7;
 }
 .modal.active {
@@ -780,13 +783,11 @@ svg {
   }
 
   .modal {
-    padding: 0;
+    padding: 150px 0 0;
   }
   .modal__inner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 56.5%;
+    height: 406px;
+    margin: auto 0 0 0;
   }
 }
 @media (max-width: 370px) {
