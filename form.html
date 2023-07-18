@@ -61,35 +61,47 @@
         </div>
       </div>
       <div class="comingSoon__inner-form">
-        <h2>
-          <span>C</span>
-          <span>o</span>
-          <span>m</span>
-          <span>i</span>
-          <span>n</span>
-          <span>g</span>
-          <span>&nbsp;</span>
-          <span>s</span>
-          <span>o</span>
-          <span>o</span>
-          <span>n</span>
-        </h2>
-        <div class="comingSoon__inner-box">
+        <div class="comingSoon__inner-container">
           <div class="input input--underline input--button-right">
             <input type="text" placeholder="Notify me on release" />
             <button class="button button--text">SEND</button>
           </div>
-          <div class="checkbox__outer">
-            <div class="checkbox">
-              <input type="checkbox">
-              <span></span>
+
+          <div class="input input--underline input--button-right">
+            <input type="text" placeholder="Typing" />
+            <button class="button button--text">SEND</button>
+          </div>
+
+          <div class="input input--underline input--button-right">
+            <input type="text" placeholder="Filled" />
+            <button class="button button--text">SEND</button>
+          </div>
+
+          <div class="input__outer active">
+            <div class="input input--underline input--button-right">
+              <input type="text" placeholder="Error" />
+              <button class="button button--text">SEND</button>
             </div>
             <label>
-              <a href="#">
-                Privacy and Policy
-              </a>
+              E-mail address is invalid
             </label>
           </div>
+
+          <div class="input__outer active">
+            <div class="input input--underline input--button-right">
+              <input type="text" placeholder="Error" />
+              <button class="button button--text">SEND</button>
+            </div>
+            <label>
+              This e-mail address is already on our database
+            </label>
+          </div>
+
+          <div class="input input--underline input--button-right">
+            <input type="text" placeholder="Saving" />
+            <button class="button button--text">SEND</button>
+          </div>
+
         </div>
       </div>
       <div class="comingSoon__inner-footer">
@@ -101,6 +113,27 @@
       </div>
     </div>
   </div>
+  <!-- modal start -->
+  <div class="modal">
+    <div class="modal__inner">
+      <div class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18.435 18.7279L5.70703 6L4.99992 6.70711L17.7278 19.435L18.435 18.7279Z" />
+          <path d="M17.7279 6.00011L5 18.728L5.70711 19.4351L18.435 6.70721L17.7279 6.00011Z" />
+        </svg>
+      </div>
+      <div class="modal__inner-info">
+        <h3>
+          Thank you
+        </h3>
+        <p>
+          You will be notified when our website is live.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
+
 </body>
 
 </html>

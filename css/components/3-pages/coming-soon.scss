@@ -67,8 +67,11 @@
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
-
-    &-header {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 54px;
     }
     &-form {
       width: 100%;
@@ -109,6 +112,11 @@
         line-height: 1.2;
         letter-spacing: 0.05em;
       }
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
   }
 }
