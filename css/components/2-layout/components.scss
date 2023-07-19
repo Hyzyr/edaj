@@ -96,19 +96,24 @@
     }
   }
   &__outer {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    label {
+    transition: 0.2s ease;
+    .input-message {
       font-size: 14px;
+      line-height: 1.2;
       font-weight: 500;
       color: $black-1;
       font-family: $font-primary;
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.3s ease-out;
     }
     &.error {
-      label {
+      .input-message {
         display: block;
+        margin-top: 0.5em;
+        opacity: 1;
+        max-height: 5em;
       }
     }
   }
@@ -232,9 +237,13 @@
 
   &__outer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    .checkbox {
+      margin-top: 0.05em;
+    }
     label {
+      cursor: pointer;
       color: $black-1;
       font-style: normal;
       font-weight: 500;
@@ -245,18 +254,6 @@
       letter-spacing: 0.8px;
       line-height: 1.2em;
       font-family: $font-primary;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: $black-1;
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-      }
-      &:hover {
-        opacity: 0.6;
-      }
       p {
         color: inherit;
         font-style: normal;
@@ -331,10 +328,39 @@
     pointer-events: all;
   }
 }
+.inline-link {
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: translateX(-50%);
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    opacity: 0.85;
+    &:after {
+      width: 90%;
+    }
+  }
+}
 
 @mixin components-460 {
   .modal {
-    padding:150px 0  0;
+    padding: 150px 0 0;
     &__inner {
       height: 406px;
       margin: auto 0 0 0;

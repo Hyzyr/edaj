@@ -117,6 +117,12 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+
+      .checkbox__outer {
+        max-width: 360px;
+        text-align: center;
+        margin: 0 auto;
+      }
     }
   }
 }

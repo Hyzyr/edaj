@@ -298,24 +298,26 @@ svg {
   width: 7em;
 }
 .input__outer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 8px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-.input__outer label {
+.input__outer .input-message {
   font-size: 14px;
+  line-height: 1.2;
   font-weight: 500;
   color: #222222;
   font-family: "Cormorant Garamond", sans-serif;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
-.input__outer.error label {
+.input__outer.error .input-message {
   display: block;
+  margin-top: 0.5em;
+  opacity: 1;
+  max-height: 5em;
 }
 
 .button {
@@ -428,14 +430,18 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+.checkbox__outer .checkbox {
+  margin-top: 0.05em;
+}
 .checkbox__outer label {
+  cursor: pointer;
   color: #222222;
   font-style: normal;
   font-weight: 500;
@@ -447,18 +453,6 @@ svg {
   letter-spacing: 0.8px;
   line-height: 1.2em;
   font-family: "Cormorant Garamond", sans-serif;
-}
-.checkbox__outer label::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: #222222;
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-}
-.checkbox__outer label:hover {
-  opacity: 0.6;
 }
 .checkbox__outer label p {
   color: inherit;
@@ -546,6 +540,37 @@ svg {
 .modal.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.inline-link {
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.inline-link:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.inline-link:hover {
+  opacity: 0.85;
+}
+.inline-link:hover:after {
+  width: 90%;
 }
 
 .comingSoon {
@@ -710,6 +735,11 @@ svg {
           flex-direction: column;
   gap: 14px;
 }
+.comingSoon__inner-box .checkbox__outer {
+  max-width: 360px;
+  text-align: center;
+  margin: 0 auto;
+}
 
 @media (max-width: 1940px) {
   .comingSoon__bg-top, .comingSoon__bg-bottom {
@@ -779,7 +809,6 @@ svg {
   .comingSoon__inner-form h2 {
     font-size: 32px;
   }
-
   .modal {
     padding: 150px 0 0;
   }
