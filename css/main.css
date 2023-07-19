@@ -478,6 +478,12 @@ svg {
   opacity: 0;
   pointer-events: none;
   padding: 0 20px;
+  -webkit-transition: 0.2s ease 0.2s;
+  transition: 0.2s ease 0.2s;
+  -webkit-transition-property: opacity, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: opacity, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: opacity, filter, backdrop-filter;
+  transition-property: opacity, filter, backdrop-filter, -webkit-filter, -webkit-backdrop-filter;
 }
 .modal__inner {
   margin: auto;
@@ -486,6 +492,11 @@ svg {
   background: #fff;
   padding: 54px 20px 40px;
   position: relative;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  opacity: 0;
+  -webkit-transition: 0.2s ease 0s;
+  transition: 0.2s ease 0s;
 }
 .modal__inner-info {
   display: -webkit-box;
@@ -540,6 +551,19 @@ svg {
 .modal.active {
   opacity: 1;
   pointer-events: all;
+  -webkit-transition: 0.2s ease 0s;
+  transition: 0.2s ease 0s;
+  -webkit-transition-property: opacity, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: opacity, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: opacity, filter, backdrop-filter;
+  transition-property: opacity, filter, backdrop-filter, -webkit-filter, -webkit-backdrop-filter;
+}
+.modal.active .modal__inner {
+  opacity: 1;
+  -webkit-transform: unset;
+          transform: unset;
+  -webkit-transition: 0.2s ease 0.15s;
+  transition: 0.2s ease 0.15s;
 }
 
 .inline-link {
